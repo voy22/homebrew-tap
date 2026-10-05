@@ -16,15 +16,14 @@ cask "pejava-commander" do
     strategy :header_match
   end
 
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "PejavaCommander.app"
 
   # The preview builds are not notarized yet: without this, macOS refuses to
   # open the app the first time.
-  postflight do
-    system_command "/usr/bin/xattr",
-                   args: ["-dr", "com.apple.quarantine", "#{appdir}/PejavaCommander.app"]
+  postflight_steps do
+    run "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "{{appdir}}/PejavaCommander.app"]
   end
 
   zap trash: [
