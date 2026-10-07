@@ -1,9 +1,9 @@
 cask "pejava-commander" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.1.0"
-  sha256 arm:   "e667e919e4182c0f6439b16625d74a84db360b5ba93d8c2e4769dfafc99afaa0",
-         intel: "ef32696320e59a1ecb4bb1c136586cc6960f2b793af46079d8c1b7d4ecd149e8"
+  version "0.2.0"
+  sha256 arm:   "d5c80eb33d15e85eb71fdca67ed67b5a221cf5210ee8634c41ef04ee2fb1d97f",
+         intel: "c5c96bb8f6224eb0050f9ff4f940b2c09928a9f70dd7bad89b699c3edec36309"
 
   url "https://pejava.com/dl/v#{version}/PejavaCommander-#{version}-#{arch}.dmg"
   name "PejavaCommander"
