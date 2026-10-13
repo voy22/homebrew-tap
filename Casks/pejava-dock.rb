@@ -1,6 +1,6 @@
 cask "pejava-dock" do
-  version "0.3.0"
-  sha256 "dc5db42c37c51d6db1203696652872b775fadd0c8afff06cf01d757fdd8440d3"
+  version "0.3.1"
+  sha256 "a01e2475614ed8210f81f6833f768a31a85a33255db0423a582b445b595a50d1"
 
   url "https://dock.pejava.com/dl/v#{version}/PejavaDock-#{version}.dmg"
   name "PejavaDock"
@@ -16,12 +16,6 @@ cask "pejava-dock" do
   depends_on macos: :sonoma
 
   app "PejavaDock.app"
-
-  # The builds are not notarized yet: without this, macOS refuses to open the
-  # app the first time.
-  postflight_steps do
-    run "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "{{appdir}}/PejavaDock.app"]
-  end
 
   # Quitting gives the system Dock back its own settings.
   uninstall quit:       "com.pejavadock.PejavaDock",
