@@ -1,6 +1,6 @@
 cask "pejava-dock" do
-  version "0.3.7"
-  sha256 "43d01048bc8112ea9d66c52861b937147c680399afd40a97d917940f50d6e9e4"
+  version "0.3.8"
+  sha256 "92fd2720e8674fc2760e8fc58dd64e51a889938ba5b59a521908c6a17ff8691f"
 
   url "https://dock.pejava.com/dl/v#{version}/PejavaDock-#{version}.dmg"
   name "PejavaDock"
